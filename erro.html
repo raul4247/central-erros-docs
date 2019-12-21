@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Documentação - Central De Erros</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/bulma.css">
+  <link rel="stylesheet" type="text/css" href="css/aside.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+  <div class="columns">
+    <aside class="column is-2 aside hero is-fullheight is-hidden-mobile">
+      <div>
+        <div class="main">
+          <hr />
+          <a href="index.html" class="item"><span class="name">Home</span></a>
+          <a href="erro.html" class="item active"><span class="name">Erro Controller</span></a>
+          <a href="usuario.html" class="item"><span class="name">Usuario Controller</span></a>
+        </div>
+      </div>
+    </aside>
+    <div class="content column is-10 title-hero">
+      <section class="hero is-dark is-bold">
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title is-2">
+              Documentação da Central de Erros - Squad 6 (Back-end)
+            </h1>
+          </div>
+        </div>
+      </section>
+      <div>
+        <div class="content">
+          <h1>Erro Controller</h1>
+          <div>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Tipo de requisição</th>
+                  <th>Rota enviada</th>
+                  <th>Serviço</th>
+                  <th>Parâmetros enviados</th>
+                  <th>Retorno</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>GET</td>
+                  <td>'/erro'</td>
+                  <td>findAll</td>
+                  <td>Pageable, status</td>
+                  <td>Page(ErroDTO)</td>
+                </tr>
+                <tr>
+                  <td>GET</td>
+                  <td>'/erro/{id}'</td>
+                  <td>findById</td>
+                  <td>Id</td>
+                  <td>Erro</td>
+                </tr>
+                <tr>
+                  <td>POST</td>
+                  <td>'/erro'</td>
+                  <td>save</td>
+                  <td>erro</td>
+                  <td>Erro</td>
+                </tr>
+                <tr>
+                  <td>PUT</td>
+                  <td>'/erro/{id}'</td>
+                  <td>update</td>
+                  <td>Id, erro</td>
+                  <td>Void</td>
+                </tr>
+                <tr>
+                  <td>DELETE</td>
+                  <td>'/erro/{id}'</td>
+                  <td>findAll</td>
+                  <td>Pageable, status</td>
+                  <td>Void</td>
+                </tr>
+                <tr>
+                  <td>GET</td>
+                  <td>'/erro/ambiente/{ambiente}'</td>
+                  <td>findPaged</td>
+                  <td>Pageable, ambiente, status, erroFilter</td>
+                  <td>Page(Erro)</td>
+                </tr>
+                <tr>
+                  <td>GET</td>
+                  <td>'/erro/titulo/{titulo}'</td>
+                  <td>findByTitulo</td>
+                  <td>Pageable, titulo</td>
+                  <td>Page(Erro)</td>
+                </tr>
+                <tr>
+                  <td>GET</td>
+                  <td>'/erro/level/{level}'</td>
+                  <td>findByLevel</td>
+                  <td>Pageable, level</td>
+                  <td>Page(Erro)</td>
+                </tr>
+                <tr>
+                  <td>GET</td>
+                  <td>'/erro/usuarioId/{usuarioId}'</td>
+                  <td>findByUsuarioId</td>
+                  <td>Pageable, usuarioId</td>
+                  <td>Page(Erro)</td>
+                </tr>
+                <tr>
+                  <td>PUT</td>
+                  <td>'/erro/updateStatus/{statusCode}'</td>
+                  <td>findById</td>
+                  <td>Pageable, statusCode</td>
+                  <td>Void</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script async type="text/javascript" src="js/bulma.js"></script>
+</body>
+
+</html>
